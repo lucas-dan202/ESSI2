@@ -1,4 +1,4 @@
-# essi2
+# ESSI2
 
 A new Flutter project.
 
