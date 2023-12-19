@@ -1,5 +1,9 @@
 # Engenharia de Software II.
 
+Desenvolvido por [Lucas Daniel Melo](lucas.dan.melo@gmail.com).
+
+## Descrição
+
 Este projeto foi feito com o propósito fundamental de proporcionar às pessoas uma ferramenta acessível e eficaz para a detecção precoce de doenças cardiovasculares, visando promover a saúde cardíaca e prevenir complicações.
 O aplicativo, chamado de "Avalia Coração", oferece uma abordagem inovadora para avaliação da saúde do coração. Ao utilizar um questionário estruturado, os usuários são guiados por uma análise cuidadosa de seus hábitos de vida, histórico médico e sintomas, criando um panorama abrangente da saúde cardiovascular.
 
