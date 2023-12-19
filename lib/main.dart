@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +22,10 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({Key? key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -128,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+  const SecondPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -178,7 +179,10 @@ class SecondPage extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 16, bottom: 16),
                   child: FloatingActionButton.extended(
                     onPressed: () {
-                      
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const QuestionarioPage()),
+                      );
                     },
                     backgroundColor: Colors.purple,
                     label: const Text(
@@ -196,6 +200,75 @@ class SecondPage extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class QuestionarioPage extends StatelessWidget {
+  const QuestionarioPage({Key? key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Questionário',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.purple,
+        automaticallyImplyLeading: false,
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: 'Diga a sua idade:'
+              ),
+            ),
+            _buildDropdownFormField('Qual o seu gênero?', ['Feminino', 'Masculino']),
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: 'Diga sua altura (m):',
+                helperText: 'Ex: 1.70',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: 'Diga o seu peso (kg):',
+                helperText: 'Ex: 80.0',
+              ),
+            ),
+            _buildDropdownFormField('Como está a sua taxa de colesterol?', ['Normal', 'Acima do Normal', 'Muito Acima do Normal']),
+            _buildDropdownFormField('Como está a taxa da sua glicose?', ['Normal', 'Acima do Normal', 'Muito Acima do Normal']),
+            _buildDropdownFormField('Você consome álcool?', ['Não', 'Sim']),
+            _buildDropdownFormField('Você tem o costume de fumar?', ['Não', 'Sim']),
+            _buildDropdownFormField('Pratica algum exercício físico?', ['Não', 'Sim']),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+              },
+              child: const Text('Enviar Respostas'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDropdownFormField(String labelText, List<String> options) {
+    return DropdownButtonFormField<String>(
+      decoration: InputDecoration(labelText: labelText),
+      items: options.map((String option) {
+        return DropdownMenuItem<String>(
+          value: option,
+          child: Text(option),
+        );
+      }).toList(),
+      onChanged: (String? value) {
+      },
     );
   }
 }
