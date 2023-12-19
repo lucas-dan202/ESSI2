@@ -5,7 +5,7 @@ O aplicativo, chamado de "Avalia Coração", oferece uma abordagem inovadora par
 
 ## Etapas para o desenvolvimento
 <ol>
-  <li>[Mapa Mental (Versão Inicial)](https://drive.google.com/file/d/1ek9kHtVvu_GsWZrjcziWOfEd-MXR2LFt/view?usp=sharing)</li>
+  <li><a href="https://drive.google.com/file/d/1ek9kHtVvu_GsWZrjcziWOfEd-MXR2LFt/view?usp=sharing">Mapa Mental (Versão Inicial)</a>.</li>
 
   <li>[Mapa Mental (Digital)](https://drive.google.com/file/d/1oPjjSfsiYxu5h7s4qxMTifAqgZ-iLDXa/view?usp=sharing)</li>
 
