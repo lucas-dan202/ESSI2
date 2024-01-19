@@ -27,4 +27,7 @@ O aplicativo, chamado de "Avalia Coração", oferece uma abordagem inovadora par
   <li><a href = "https://drive.google.com/file/d/1NnO0iMVATi7Bz8BwWg8zm2OzEPRfEwHA/view?usp=sharing">Descrição do aplicativo</a>.</li>
 
   <li><a href = "https://drive.google.com/drive/folders/1N24AnQgnEBH8EAtdU7irLXum27Oemdi8?usp=sharing">Diagrama de Arquitetura e Widget Tree</a>.</li>
+
+  <li><a href = "https://drive.google.com/file/d/1pIsQeKguEpGMx2LRzYmA3B8xLV-eFRhJ/view?usp=sharing"> Vídeo de
+  explicação</a>.</li>
 </ol>
